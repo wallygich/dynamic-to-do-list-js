@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Create a remove button
         const removeBtn = document.createElement('button');
         removeBtn.textContent = 'Remove';
-        removeBtn.className = 'remove-btn';
+        removeBtn.classList.add('remove-btn'); // ✅ Corrected: Use classList.add
 
         // Set up event listener to remove the task when button is clicked
         removeBtn.onclick = function () {
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // ✅ Invoke the addTask function on page load (as per instruction)
-    addTask(); // This will add a task if there’s any prefilled value (mostly symbolic unless preloaded)
+    // Optional: invoke addTask on page load if needed (symbolic)
+    addTask();
 
-    // Optional: auto-focus the input when page loads
+    // Focus the input field on load
     taskInput.focus();
 });
