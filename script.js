@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // ✅ Invoke the addTask function on page load (as per instruction)
+    addTask(); // This will add a task if there’s any prefilled value (mostly symbolic unless preloaded)
+
     // Optional: auto-focus the input when page loads
     taskInput.focus();
 });
